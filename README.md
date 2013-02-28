@@ -72,6 +72,21 @@ function main() {
 </pre>
 </td></tr></table>
 
+Essentially whenever named arguments in .scad appear func(a=1), translate it into func({a:1}), for example:
+<ul>
+<li><b>.scad:</b> <tt>translate([0,0,2]) sphere(size=2,$fn=50);</tt>
+<li><b>.jscad:</b> <tt>translate([0,0,2], sphere({size:2,fn:50}));</tt>
+</ul>
+
+Also:
+<ul>
+cube();
+cube(2);
+cube([1,2,3]);
+cube({size: [1,2,3]});
+cube({size:1, center: tue});
+</ul>
+
 <h2>Example</h2>
 Go to http://joostn.github.com/OpenJsCad/processfile.html and paste <tt>openscad.jscad</tt> in there.
 
