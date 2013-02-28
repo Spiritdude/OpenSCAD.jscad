@@ -12,6 +12,7 @@ Some wrapper functions to ease the translation from <b><a href="http://openscad.
 <ul>
 <li>3d primitives: <b>sphere(), cube(), cylinder()</b>
 <li>3d transformations: <b>translate(), rotate(), scale()</b>
+<li>CSG operations: <b>union(), difference(), intersect()</b>
 <li>what does <b>not (yet) work</b>:
 <ul>
 <li>cylinder(fs=<i>angle</i>)
@@ -97,4 +98,4 @@ Go to http://joostn.github.com/OpenJsCad/processfile.html and paste <tt>openscad
 <li><a href="https://github.com/garyhodgson/openscad.net">OpenSCAD.net</a> which provides a .scad to .js translator direct.
 <li><a href="https://github.com/kaosat-dev/CoffeeSCad">CoffeeSCad</a> which provides CoffeeScript CAD development like OpenJsCad.
 </ul>
-
+            
