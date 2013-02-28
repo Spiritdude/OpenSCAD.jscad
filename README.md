@@ -30,11 +30,11 @@ union() {
    }
 }
 </pre>
-</td><td valign=top>
+</td><td valign=top width=50%>
 <pre>
 function main() {  
    var cubes = new Array();
-   for(i=0; i<20; i++) {
+   for(i=0; i&lt;20; i++) {
       cubes[i] = rotate([0,i/20*360,0], 
          translate([i,0,0], 
          rotate([0,i/20*90,i/20*90,0], 
