@@ -1,5 +1,6 @@
 
-<h1>Description</h1>
+<h1>OpenSCAD.jscad</h1>
+
 Some wrapper functions to ease the translation from <b><a href="http://openscad.org/">OpenSCAD</a> (.scad)</b> to <b><a href="http://joostn.github.com/OpenJsCad/">OpenJsCad</a> (.jscad)</b>: <b>OpenSCAD.jscad</b> (<tt>openscad.jscad</tt>).
 
 <h2>History</h2>
