@@ -79,13 +79,13 @@ Essentially whenever named arguments in .scad appear func(a=1), translate it int
 </ul>
 
 Also:
-<ul>
-cube();
-cube(2);
-cube([1,2,3]);
-cube({size: [1,2,3]});
-cube({size:1, center: tue});
-</ul>
+<pre>
+   cube();                  // 1x1x1
+   cube(2);                 // 2x2x2
+   cube([1,2,3]);           // 1x2x3
+   cube({size: [1,2,3]});   // dito
+   cube({size:1, center: true});
+</pre>
 
 <h2>Example</h2>
 Go to http://joostn.github.com/OpenJsCad/processfile.html and paste <tt>openscad.jscad</tt> in there.
