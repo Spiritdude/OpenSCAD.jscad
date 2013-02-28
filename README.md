@@ -5,7 +5,7 @@ Some wrapper functions to ease the translation from <b><a href="http://openscad.
 <img src="sshot.png">
 
 <h2>Purpose</h2>
-<b><a href="http://joostn.github.com/OpenJsCad/">OpenJsCad</a></b> is object oriented, and usually this imposes more verbosity of the source-code, whereas OpenSCAD has a simple syntax many developers are familiar with already, but unfortunately OpenJsCad introduced non-intuitive equivalents (essentially one has to memorize a new set of arguments), therefore a few brief wrapping functions (openscad.jscad) provide a much easier translation of existing .scad to .jscad files:
+<b><a href="http://joostn.github.com/OpenJsCad/">OpenJsCad</a></b> is object oriented, and usually this imposes more verbosity of the source-code, whereas <b>OpenSCAD</b> has a simple syntax many developers are familiar with already, but unfortunately <b>OpenJsCad</b> introduced non-intuitive equivalents (essentially one has to memorize a new set of arguments), therefore a few brief wrapping functions (<tt>openscad.jscad</tt>) provide a much easier translation of existing .scad to .jscad files:
 
 <h2>Example</h2>
 <table><tr><td valign=top>
@@ -61,5 +61,6 @@ Go to http://joostn.github.com/OpenJsCad/processfile.html and paste <tt>openscad
 <h2>See Also</h2>
 <ul>
 <li><a href="https://github.com/garyhodgson/openscad.net">OpenSCAD.net</a> which provides a .scad to .js translator direct.
+<li><a href="https://github.com/kaosat-dev/CoffeeSCad">CoffeeSCad</a> which provides CoffeeScript CAD development like OpenJsCad.
 </ul>
 
