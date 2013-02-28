@@ -1,8 +1,26 @@
 
 <h1>Description</h1>
-Some wrapper functions to ease the translation from <b><a href="http://openscad.org/">OpenSCAD</a> (.scad)</b> to <b><a href="http://joostn.github.com/OpenJsCad/">OpenJsCad (.jscad)</b>.
+Some wrapper functions to ease the translation from <b><a href="http://openscad.org/">OpenSCAD</a> (.scad)</b> to <b><a href="http://joostn.github.com/OpenJsCad/">OpenJsCad (.jscad)</b>: <b>OpenSCAD.jscad</b> (<tt>openscad.jscad</tt>).
 
 <img src="sshot.png">
+
+<h2>History</h2>
+<ul>
+<li> 2013/02/28: 0.002: center:false default
+<li> 2013/02/27: 0.001: first version, center: true|false support
+</ul>
+
+<h2>What Works</h2>
+<ul>
+<li>3d primitives: sphere, cube, cylinder
+<li>3d transformations: translation, rotate, scale
+<li>what does not (yet) work:
+<ul>
+<li>linear_extrude()
+<li>rotate_extrude()
+<li>2d primitives
+</ul>
+</ul>
 
 <h2>Purpose</h2>
 <b><a href="http://joostn.github.com/OpenJsCad/">OpenJsCad</a></b> is object oriented, and usually this imposes more verbosity of the source-code, whereas <b>OpenSCAD</b> has a simple syntax many developers are familiar with already, but unfortunately <b>OpenJsCad</b> introduced non-intuitive equivalents (essentially one has to memorize a new set of arguments), therefore a few brief wrapping functions (<tt>openscad.jscad</tt>) provide a much easier translation of existing .scad to .jscad files:

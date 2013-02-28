@@ -12,3 +12,4 @@ union() {
       rotate([0,i/20*360,0]) translate([i,0,0]) rotate([0,i/20*90,i/20*90,0]) cube(size=[1,1.2,.5],center=true);
    }
 }
+
