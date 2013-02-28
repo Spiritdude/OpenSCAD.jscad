@@ -1,11 +1,11 @@
 
 <h1>Description</h1>
-Some wrapper functions to ease the translation from OpenSCAD (.scad) to OpenJsCad (.jscad).
+Some wrapper functions to ease the translation from <b><a href="http://openscad.org/">OpenSCAD</a> (.scad)</b> to <b><a href="http://joostn.github.com/OpenJsCad/">OpenJsCad (.jscad)</b>.
 
 <img src="sshot.png">
 
 <h2>Purpose</h2>
-OpenJsCad is object oriented, and usually this imposes more verbosity of the source-code, whereas OpenSCAD has a simple syntax many developers are familiar with already, but unfortunately OpenJsCad introduced non-intuitive equivalents (essentially one has to memorize a new set of arguments), therefore a few brief wrapping functions (openscad.jscad) provide a much easier translation of existing .scad to .jscad files:
+<b><a href="http://joostn.github.com/OpenJsCad/">OpenJsCad</a></b> is object oriented, and usually this imposes more verbosity of the source-code, whereas OpenSCAD has a simple syntax many developers are familiar with already, but unfortunately OpenJsCad introduced non-intuitive equivalents (essentially one has to memorize a new set of arguments), therefore a few brief wrapping functions (openscad.jscad) provide a much easier translation of existing .scad to .jscad files:
 
 <h2>Example</h2>
 <table><tr><td valign=top>
@@ -58,4 +58,8 @@ function main() {
 <h2>Example</h2>
 Go to http://joostn.github.com/OpenJsCad/processfile.html and paste <tt>openscad.jscad</tt> in there.
 
+<h2>See Also</h2>
+<ul>
+<li><a href="https://github.com/garyhodgson/openscad.net">OpenSCAD.net</a> which provides a .scad to .js translator direct.
+</ul>
 
