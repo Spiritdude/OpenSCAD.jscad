@@ -2,8 +2,6 @@
 <h1>Description</h1>
 Some wrapper functions to ease the translation from <b><a href="http://openscad.org/">OpenSCAD</a> (.scad)</b> to <b><a href="http://joostn.github.com/OpenJsCad/">OpenJsCad (.jscad)</b>: <b>OpenSCAD.jscad</b> (<tt>openscad.jscad</tt>).
 
-<img src="sshot.png">
-
 <h2>History</h2>
 <ul>
 <li> 2013/02/28: 0.002: center:false default
@@ -75,6 +73,8 @@ function main() {
 
 <h2>Example</h2>
 Go to http://joostn.github.com/OpenJsCad/processfile.html and paste <tt>openscad.jscad</tt> in there.
+
+<img src="sshot.png">
 
 <h2>See Also</h2>
 <ul>
