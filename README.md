@@ -10,7 +10,6 @@ OpenJsCad is object oriented, and usually this imposes more verbosity of the sou
 <h2>Example</h2>
 <table><tr><td valign=top>
 <b>.scad</b>
-
 <pre>
 union() {
       //cube(size=[30,30,0.1],center=true);
@@ -31,6 +30,7 @@ union() {
 }
 </pre>
 </td><td valign=top width=50%>
+<b>.jscad</b>
 <pre>
 function main() {  
    var cubes = new Array();
