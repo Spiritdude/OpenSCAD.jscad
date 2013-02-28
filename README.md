@@ -10,9 +10,9 @@ Some wrapper functions to ease the translation from <b><a href="http://openscad.
 
 <h2>What Works</h2>
 <ul>
-<li>3d primitives: sphere(), cube(), cylinder()
-<li>3d transformations: translate(), rotate(), scale()
-<li>what does not (yet) work:
+<li>3d primitives: <b>sphere(), cube(), cylinder()</b>
+<li>3d transformations: <b>translate(), rotate(), scale()</b>
+<li>what does <b>not (yet) work</b>:
 <ul>
 <li>cylinder(fs=<i>angle</i>)
 <li>linear_extrude()
