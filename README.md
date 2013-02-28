@@ -1,8 +1,8 @@
 
-<img src="sshot.png">
-
-<h1>Description</h2>
+<h1>Description</h1>
 Some wrapper functions to ease the translation from OpenSCAD (.scad) to OpenJsCad (.jscad).
+
+<img src="sshot.png">
 
 <h2>Purpose</h2>
 OpenJsCad is object oriented, and usually this imposes more verbosity of the source-code, whereas OpenSCAD has a simple syntax many developers are familiar with already, but unfortunately OpenJsCad introduced non-intuitive equivalents (essentially one has to memorize a new set of arguments), therefore a few brief wrapping functions (openscad.jscad) provide a much easier translation of existing .scad to .jscad files:
