@@ -20,7 +20,7 @@ var vm = require('vm');
 //include('./openscad.js');         // later
 
 var CSG = require('./csg.js').CSG;
-var CAG = require('./csg.js').CAG;  // anyway to include CSG & CAG in once?
+var CAG = require('./csg.js').CAG;  // any way to include CSG & CAG in once?
 
 //require('./OpenJsCad/openjscad.js'); // make it a nodejs module (later)
 
