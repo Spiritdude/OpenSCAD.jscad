@@ -110,6 +110,8 @@ by default creates filename.('jscad' &rarr; 'stl'), optionally <tt>-o<i>filename
 
 <b>Important:</b> by default <tt>openjscad</tt> (CLI) supports the OpenSCAD.jscad extension (unlike the web-platform). 
 
+<img src="imgs/sshot-stl.png">
+
 <h2>Files</h2>
 <ul>
 <li>openjscad: command-line nodejs script (renders .jscad to .stl)
