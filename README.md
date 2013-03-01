@@ -16,7 +16,7 @@ Some wrapper functions to ease the translation from <b><a href="http://openscad.
 
 <h2>What Works</h2>
 <ul>
-<li><b>openjscad</b> CLI (command-line interface, alike "openscad test.scad -otest.st")
+<li><b>openjscad</b> CLI (command-line interface) .jscad to .stl (like "openscad test.scad -otest.st")
 <li>3d primitives: <b>sphere(), cube(), cylinder()</b>
 <li>3d transformations: <b>translate(), rotate(), scale()</b>
 <li>CSG operations: <b>union(), difference(), intersect()</b>
