@@ -15,7 +15,7 @@ And <b>OpenJsCad CLI (<tt>openjscad</tt>)</b> written on nodejs (server-side jav
 
 <h2>What Works</h2>
 <ul>
-<li><tt>openjscad</tt> CLI (command-line interface, alike "openscad test.scad -otest.st")
+<li><b>openjscad</b> CLI (command-line interface, alike "openscad test.scad -otest.st")
 <li>3d primitives: <b>sphere(), cube(), cylinder()</b>
 <li>3d transformations: <b>translate(), rotate(), scale()</b>
 <li>CSG operations: <b>union(), difference(), intersect()</b>
@@ -33,7 +33,7 @@ And <b>OpenJsCad CLI (<tt>openjscad</tt>)</b> written on nodejs (server-side jav
 
 <h2>Example</h2>
 <table><tr><td valign=top>
-<b>.scad</b>
+<b>example.scad</b>
 <pre>
 union() {
       //cube(size=[30,30,0.1],center=true);
@@ -54,7 +54,7 @@ union() {
 }
 </pre>
 </td><td valign=top width=50%>
-<b>.jscad</b>
+<b>example.jscad</b>
 <pre>
 function main() {  
    var cubes = new Array();
