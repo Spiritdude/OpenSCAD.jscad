@@ -117,6 +117,16 @@ by default creates filename.('jscad' &rarr; 'stl'), optionally <tt>-o<i>filename
 <li>example.scad: original openscad .scad file
 </ul>
 
+<h2>.JS vs .JSCAD</h2>
+
+In general .js and .jscad are both written in JavaScript, yet .jscad must have a function main():
+<pre>
+function main() {
+   var csg = union( ... );
+   return csg;
+}
+</pre>
+ 
 <h2>See Also</h2>
 <ul>
 <li><a href="https://github.com/garyhodgson/openscad.net">OpenSCAD.net</a> which provides a .scad to .js translator direct.
