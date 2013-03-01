@@ -1,6 +1,8 @@
 
 <h1>OpenSCAD.jscad & openjscad (CLI)</h1>
 
+<b>Version 0.003 (ALPHA)</b>
+
 Some wrapper functions to ease the translation from <b><a href="http://openscad.org/">OpenSCAD</a> (.scad)</b> to <b><a href="http://joostn.github.com/OpenJsCad/">OpenJsCad</a> (.jscad)</b>: <b>OpenSCAD.jscad</b> (<tt>openscad.jscad</tt>).
 And OpenJsCad CLI (<tt>openjscad</tt>) written on nodejs (server-side javascript)
 
@@ -96,6 +98,14 @@ Also:
 Go to http://joostn.github.com/OpenJsCad/processfile.html and paste <tt>openscad.jscad</tt> in there.
 
 <img src="sshot.png">
+
+<h2>openjscad (CLI)</h2>
+<tt>openjscad</tt> is a nodejs script, which renders .jscad to .stl on command-line level:
+<pre>
+% ./openjscad example.jscad 
+% ./openjscad example.jscad -otest1.stl
+</pre>
+by default creates filename.('jscad' &rightarr; 'stl'), optionally <tt>-o<i>filename.stl</i></tt> can be defined (alike with <tt>openscad</tt>).
 
 <h2>See Also</h2>
 <ul>
