@@ -5,7 +5,7 @@
 
 Some wrapper functions to ease the translation from <b><a href="http://openscad.org/">OpenSCAD</a> (.scad)</b> to <b><a href="http://joostn.github.com/OpenJsCad/">OpenJsCad</a> (.jscad)</b>: <b>OpenSCAD.js(cad)</b> (<tt>openscad.js / openscad.jscad</tt>).
 
-<b>OpenJsCad CLI (<tt>openjscad</tt>)</b> written on nodejs (server-side javascript) converting .jscad to .stl.
+<b>OpenJsCad CLI (<tt>openjscad</tt>)</b> written on nodejs (server-side javascript) converting <b>.jscad to .stl</b>.
 
 <h2>History</h2>
 <ul>
