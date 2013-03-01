@@ -128,6 +128,7 @@ function main() {
    return csg;
 }
 </pre>
+returning an object of CSG (from csg.js).
  
 <h2>See Also</h2>
 <ul>
