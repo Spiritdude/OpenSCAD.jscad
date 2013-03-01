@@ -103,9 +103,9 @@ Go to http://joostn.github.com/OpenJsCad/processfile.html and paste <tt>openscad
 <tt>openjscad</tt> is a nodejs script, which renders .jscad to .stl on command-line level:
 <pre>
 % ./openjscad example.jscad 
-% ./openjscad example.jscad -otest1.stl
+% ./openjscad example.jscad -otest.stl
 </pre>
-by default creates filename.('jscad' &rightarr; 'stl'), optionally <tt>-o<i>filename.stl</i></tt> can be defined (alike with <tt>openscad</tt>).
+by default creates filename.('jscad' &rarr; 'stl'), optionally <tt>-o<i>filename.stl</i></tt> can be defined (alike with <tt>openscad</tt>).
 
 <h2>See Also</h2>
 <ul>
