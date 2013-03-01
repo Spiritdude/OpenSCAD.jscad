@@ -1,16 +1,19 @@
 
-<h1>OpenSCAD.jscad</h1>
+<h1>OpenSCAD.jscad & openjscad (CLI)</h1>
 
 Some wrapper functions to ease the translation from <b><a href="http://openscad.org/">OpenSCAD</a> (.scad)</b> to <b><a href="http://joostn.github.com/OpenJsCad/">OpenJsCad</a> (.jscad)</b>: <b>OpenSCAD.jscad</b> (<tt>openscad.jscad</tt>).
+And OpenJsCad CLI (<tt>openjscad</tt>) written on nodejs (server-side javascript)
 
 <h2>History</h2>
 <ul>
+<li> 2013/03/01: 0.003: example.jscad vs example.scad, openscad.js/.jscad split up, and openjscad cli in nodejs implemented
 <li> 2013/02/28: 0.002: center:false default
 <li> 2013/02/27: 0.001: first version, center: true|false support
 </ul>
 
 <h2>What Works</h2>
 <ul>
+<li><tt>openjscad</tt> CLI (command-line interface, alike "openscad test.scad -otest.st")
 <li>3d primitives: <b>sphere(), cube(), cylinder()</b>
 <li>3d transformations: <b>translate(), rotate(), scale()</b>
 <li>CSG operations: <b>union(), difference(), intersect()</b>

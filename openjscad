@@ -1,0 +1,66 @@
+#!/usr/bin/nodejs
+
+// OpenJsCad CLI interface, written by Rene K. Mueller <spiritdude@gmail.com>
+// License: GPLv2
+//
+var version = '0.001';
+//
+// Description:
+//   openjscad <file> [-o<stl>]
+// e.g.
+//   openjscad test.jscad                    
+//   openjscad test.jscad -osomething.stl
+//
+// History:
+// 2013/03/01: 0.001: initial version, with base function from openscad.jscad
+//
+
+var fs = require('fs');
+var vm = require('vm');
+//include('./openscad.js');         // later
+
+var CSG = require('./csg.js').CSG;
+var CAG = require('./csg.js').CAG;  // anyway to include CSG & CAG in once?
+
+//require('./OpenJsCad/openjscad.js'); // make it a nodejs module (later)
+
+// hint: https://github.com/substack/node-optimist
+//       https://github.com/visionmedia/commander.js
+//
+//process.argv.forEach(function (val, index, array) {
+//  console.log(index + ': ' + val);
+//});
+
+var args = process.argv.splice(2);
+
+var inf = args[0];
+var outf = inf;
+outf = outf.replace(/\.[^\.]+$/,'.stl');
+
+if(args.length==2) {
+   outf = args[1];
+   outf = outf.replace(/^\-o(\S+)$/,'$1');
+}
+
+//console.log("reading "+inf);
+var src = fs.readFileSync(inf);
+var scad = fs.readFileSync('./openscad.js');
+
+//var csg = sphere(1);          // -- basic test
+//var csg = require(file).main; // -- treating .jscad as module? later perhaps
+
+console.log("computing stl from "+inf+" to "+outf);
+var csg = eval(scad+src+"\nmain()\n");    // openscad.js + *.jscad + main()
+
+//var stl = csg.fixTJunctions().toStlBinary();
+var stl = csg.fixTJunctions().toStlString();
+
+var s = fs.WriteStream(outf);
+s.write(stl);
+
+// -- helper functions 
+
+function include(fn) {
+   return eval(fs.readFileSync(fn));
+}
+

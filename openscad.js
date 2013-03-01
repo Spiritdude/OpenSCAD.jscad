@@ -1,4 +1,4 @@
-// openscad.jscad, a few functions to simplify coding OpenSCAD-like
+// openscad.js, a few functions to simplify coding OpenSCAD-like
 //    written by Rene K. Mueller <spiritdude@gmail.com>, License: GPLv2
 //
 // Version: 0.003
@@ -29,24 +29,25 @@
 //    }
 // }
 
-function main() {  // -- the same in .jscad :-)
-   var cubes = new Array();
-   for(i=0; i<20; i++) {
-      cubes[i] = rotate([0,i/20*360,0], translate([i,0,0], rotate([0,i/20*90,i/20*90,0], cube({size:[1,1.2,.5],center:true}))));
-   }
-   return union(
-      //cube({size:[30,30,0.1],center:true}),
-      translate([3,0,0],cube()),
-      difference(
-         rotate([0,-45,0], cube({size:[8,7,3],center:true})),
-         sphere({r:3,fn:20,center:true})
-      ),
-      translate([10,5,5], scale([0.5,1,2], sphere({r:5,fn:50}))),
-      translate([-15,0,0], cylinder({r1:2,r2:0,h:10,fn:20})),
-      cubes
-      //translate([0,5,0], linear_extrude({height:10, center: true, twist: 100, slices: 50}, translate([2,0,0], circle(1))))
-   );
-}
+// function main() {  // -- the same in .jscad :-)
+//    var cubes = new Array();
+//    for(i=0; i<20; i++) {
+//       cubes[i] = rotate([0,i/20*360,0], translate([i,0,0], rotate([0,i/20*90,i/20*90,0], cube({size:[1,1.2,.5],center:true}))));
+//    }
+//    return union(
+//       //cube({size:[30,30,0.1],center:true}),
+//       translate([3,0,0],cube()),
+//       difference(
+//          rotate([0,-45,0], cube({size:[8,7,3],center:true})),
+//          sphere({r:3,fn:20,center:true})
+//       ),
+//       translate([10,5,5], scale([0.5,1,2], sphere({r:5,fn:50}))),
+//       translate([-15,0,0], cylinder({r1:2,r2:0,h:10,fn:20})),
+//       cubes
+//       //translate([0,5,0], linear_extrude({height:10, center: true, twist: 100, slices: 50}, translate([2,0,0], circle(1))))
+//    );
+// }
+
 
 // wrapper functions for OpenJsCAD:
 
@@ -142,7 +143,7 @@ function rotate(v,o) {
 }
 
 function linear_extrude(p,s) {
-   OpenJsCad.log("linear_extrude() not yet implemented");
+   console.log("linear_extrude() not yet implemented");
    return;
    var h = 1, off = 0, convexity = 10, twist = 0, slices = 10;
    if(p.height) h = p.height;
@@ -153,7 +154,7 @@ function linear_extrude(p,s) {
 }
 
 function rotate_extrude(p) {
-   OpenJsCad.log("rotate_extrude() not yet implemented");
+   console.log("rotate_extrude() not yet implemented");
 }
 
 // 2D primitives not yet ready 
