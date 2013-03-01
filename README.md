@@ -108,6 +108,8 @@ Go to http://joostn.github.com/OpenJsCad/processfile.html and paste <tt>openscad
 </pre>
 by default creates filename.('jscad' &rarr; 'stl'), optionally <tt>-o<i>filename.stl</i></tt> can be defined (alike with <tt>openscad</tt>).
 
+<b>Important:</b> by default <tt>openjscad</tt> (CLI) supports the OpenSCAD.jscad extension (unlike the web-platform). 
+
 <h2>Files</h2>
 <ul>
 <li>openjscad: command-line nodejs script (renders .jscad to .stl)
