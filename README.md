@@ -97,7 +97,7 @@ Also:
 <h2>Example</h2>
 Go to http://joostn.github.com/OpenJsCad/processfile.html and paste <tt>openscad.jscad</tt> in there.
 
-<img src="sshot.png">
+<img src="imgs/sshot.png">
 
 <h2>openjscad (CLI)</h2>
 <tt>openjscad</tt> is a nodejs script, which renders .jscad to .stl on command-line level:

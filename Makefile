@@ -12,7 +12,7 @@ clean::
 
 # --- developers only below
 
-github::
+github::	clean
 	git remote set-url origin git@github.com:Spiritdude/OpenSCAD.jscad.git
 	git push -u origin master
 
