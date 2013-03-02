@@ -1,7 +1,7 @@
 // openscad.jscad, a few functions to simplify coding OpenSCAD-like
 //    written by Rene K. Mueller <spiritdude@gmail.com>, License: GPLv2
 //
-// Version: 0.003
+// Version: 0.004
 //
 // Description:
 // Helping to convert OpenSCAD .scad files to OpenJSCad .jscad files with 
@@ -9,6 +9,7 @@
 //     http://joostn.github.com/OpenJsCad/processfile.html
 //
 // History:
+// 2013/03/02: 0.004: better install, examples/, etc refinements (working on 2d primitives)
 // 2013/03/01: 0.003: example.jscad vs example.scad, openscad.js/.jscad split up, and openjscad cli in nodejs implemented
 // 2013/02/28: 0.002: center:false default
 // 2013/02/27: 0.001: first version, center: true|false support

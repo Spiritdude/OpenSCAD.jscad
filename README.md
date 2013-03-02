@@ -9,10 +9,17 @@ Some wrapper functions to ease the translation from <b><a href="http://openscad.
 
 <h2>History</h2>
 <ul>
+<li> 2013/03/02: 0.004: better install, examples/, etc refinements (working on 2d primitives)
 <li> 2013/03/01: 0.003: example.jscad vs example.scad, openscad.js/.jscad split up, and openjscad cli in nodejs implemented
 <li> 2013/02/28: 0.002: center:false default
 <li> 2013/02/27: 0.001: first version, center: true|false support
 </ul>
+
+<h2>Installation</h2>
+
+<pre>
+% make install
+</pre>
 
 <h2>What Works</h2>
 <ul>
