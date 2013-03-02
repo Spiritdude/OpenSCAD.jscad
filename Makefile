@@ -1,14 +1,25 @@
-VERSION=0.003
-NAME=openscad.jscad
+VERSION = 0.004
+NAME = openscad.jscad
+LIB = /usr/local/lib/openjscad/  # -- if you change it, change also entry in openjscad:'var lib = '/....';
 
 all::
-	@echo "make tests" 
+	@echo "make install clean tests" 
 
 tests::
-	./openjscad example.jscad -oexample.stl
+	cd examples; make 
 
 clean::
-	rm -f example.stl
+	cd examples; make clean
+
+install::
+	sudo scp openjscad /usr/local/bin/
+	#sudo test -d ${LIB} || mkdir ${LIB}
+	mkdir -p ${LIB};
+	sudo scp *.js ${LIB}
+	
+deinstall::
+	sudo rm -f ${LIB}/csg.js ${LIB}/openscad.js
+	sudo 
 
 # --- developers only below
 
@@ -23,5 +34,5 @@ backup::	clean
 	scp ../Backup/${NAME}-${VERSION}.tar.gz the-labs.com:Backup/
 
 edit::
-	dee4 openjscad openscad.js openscad.jscad example.jscad example.scad Makefile README.md 
+	dee4 openjscad openscad.js openscad.jscad Makefile README.md examples/*
 

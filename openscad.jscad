@@ -138,11 +138,19 @@ function scale(v,o) {
 }
 
 function rotate(v,o) { 
-   return o.rotateX(v[0]).rotateY(v[1]).rotateZ(v[2]); 
+   if(arguments.length==3) {  // rotate(r,[x,y,z],o)
+      var r = arguments[0];
+      var v = arguments[1];
+      var o = arguments[2];
+      return o.rotateX(v[0]*r).rotateY(v[1]*r).rotateZ(v[2]*r);
+      
+   } else {                   // rotate([x,y,z],o)
+      return o.rotateX(v[0]).rotateY(v[1]).rotateZ(v[2]); 
+   }
 }
 
 function linear_extrude(p,s) {
-   OpenJsCad.log("linear_extrude() not yet implemented");
+   console.log("linear_extrude() not yet implemented");
    return;
    var h = 1, off = 0, convexity = 10, twist = 0, slices = 10;
    if(p.height) h = p.height;
@@ -153,7 +161,7 @@ function linear_extrude(p,s) {
 }
 
 function rotate_extrude(p) {
-   OpenJsCad.log("rotate_extrude() not yet implemented");
+   console.log("rotate_extrude() not yet implemented");
 }
 
 // 2D primitives not yet ready 
@@ -183,4 +191,5 @@ function polygon() {
    var o = CAG.fromPoints(a);
    return o;
 }
+
 

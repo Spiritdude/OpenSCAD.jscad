@@ -1,7 +1,7 @@
 // openscad.js, a few functions to simplify coding OpenSCAD-like
 //    written by Rene K. Mueller <spiritdude@gmail.com>, License: GPLv2
 //
-// Version: 0.003
+// Version: 0.004
 //
 // Description:
 // Helping to convert OpenSCAD .scad files to OpenJSCad .jscad files with 
@@ -9,6 +9,7 @@
 //     http://joostn.github.com/OpenJsCad/processfile.html
 //
 // History:
+// 2013/03/02: 0.004: refinements (working on 2d primitives)
 // 2013/03/01: 0.003: example.jscad vs example.scad, openscad.js/.jscad split up, and openjscad cli in nodejs implemented
 // 2013/02/28: 0.002: center:false default
 // 2013/02/27: 0.001: first version, center: true|false support
@@ -139,7 +140,15 @@ function scale(v,o) {
 }
 
 function rotate(v,o) { 
-   return o.rotateX(v[0]).rotateY(v[1]).rotateZ(v[2]); 
+   if(arguments.length==3) {  // rotate(r,[x,y,z],o)
+      var r = arguments[0];
+      var v = arguments[1];
+      var o = arguments[2];
+      return o.rotateX(v[0]*r).rotateY(v[1]*r).rotateZ(v[2]*r);
+      
+   } else {                   // rotate([x,y,z],o)
+      return o.rotateX(v[0]).rotateY(v[1]).rotateZ(v[2]); 
+   }
 }
 
 function linear_extrude(p,s) {
