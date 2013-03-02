@@ -121,13 +121,16 @@ by default creates filename.('jscad' &rarr; 'stl'), optionally <tt>-o <i>filenam
 
 <h2>Files</h2>
 <ul>
-<li>openjscad: command-line nodejs script (renders .jscad to .stl)
-<li>openscad.js: openscad wrapper function in javascript (in conjunction with csg.js)
-<li>openscad.jscad: same as above with a working example (main() defined)
-<li>examples/example000.jscad: working example (without openscad.js library)
-<li>examples/example000.scad: original openscad .scad file
-<li>examples/example001.jscad: converted from example001.scad (from OpenSCAD/examples/)
-<li>examples/example001.scad: original openscad .scad file
+<li><b>openjscad</b>: command-line nodejs script (renders .jscad to .stl)
+<li><b>openscad.js</b>: openscad wrapper function in javascript (in conjunction with csg.js)
+<li><b>openscad.jscad</b>: same as above with a working example (main() defined)
+<li><b>examples/</b>:
+<ul>
+<li>example000.jscad: working example (without openscad.js library)
+<li>example000.scad: original openscad .scad file
+<li>example001.jscad: converted from example001.scad (from OpenSCAD/examples/)
+<li>example001.scad: original openscad .scad file
+</ul>
 </ul>
 
 <h2>.JS vs .JSCAD</h2>
