@@ -17,8 +17,8 @@ Some wrapper functions to ease the translation from <b><a href="http://openscad.
 
 <h2>Requirements</h2>
 <ul>
-<li>optional: <a href="http://joostn.github.com/OpenJsCad/">OpenJsCad</a> (for now, this package might later merge)
-<li><a href="http://nodejs.org">NodeJS.org</a>
+<li><b><a href="http://nodejs.org">NodeJS.org</a></b>
+<li>Optional: <a href="http://joostn.github.com/OpenJsCad/">OpenJsCad</a> (for now, this package might later merge with it)
 </ul>
 
 <h2>Installation</h2>
