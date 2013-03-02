@@ -15,6 +15,12 @@ Some wrapper functions to ease the translation from <b><a href="http://openscad.
 <li> 2013/02/27: 0.001: first version, center: true|false support
 </ul>
 
+<h2>Requirements</h2>
+<ul>
+<li>optional: <a href="http://joostn.github.com/OpenJsCad/">OpenJsCad</a> (for now, this package might later merge)
+<li><a href="http://nodejs.org">NodeJS.org</a>
+</ul>
+
 <h2>Installation</h2>
 
 <pre>
