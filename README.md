@@ -33,6 +33,7 @@ Some wrapper functions to ease the translation from <b><a href="http://openscad.
 <li>3d primitives: <b>sphere(), cube(), cylinder()</b>
 <li>3d transformations: <b>translate(), rotate(), scale()</b>
 <li>CSG operations: <b>union(), difference(), intersect()</b>
+<p>
 <li>what does <b>not (yet) work</b>:
 <ul>
 <li>cylinder(fs=<i>angle</i>)
