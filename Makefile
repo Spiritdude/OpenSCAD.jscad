@@ -14,7 +14,7 @@ clean::
 install::
 	sudo scp openjscad /usr/local/bin/
 	#sudo test -d ${LIB} || mkdir ${LIB}
-	mkdir -p ${LIB};
+	sudo mkdir -p ${LIB}
 	sudo scp *.js ${LIB}
 	
 deinstall::
