@@ -148,7 +148,6 @@ returning an object of CSG (from csg.js).
 <ul>
 <li><a href="https://github.com/garyhodgson/openscad.net">OpenSCAD.net</a> which provides a .scad to .js translator direct.
 <li><a href="https://github.com/kaosat-dev/CoffeeSCad">CoffeeSCad</a> which provides CoffeeScript CAD development like OpenJsCad.
-<p>
 <li><a href="https://github.com/Spiritdude/RepRapCloud">RepRapCloud</a>, distribution of tasks (Open[J]SCAD, Slic3r etc) on several servers
 </ul>
             
