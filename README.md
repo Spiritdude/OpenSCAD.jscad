@@ -131,6 +131,7 @@ by default creates filename.('jscad' &rarr; 'stl'), optionally <tt>-o <i>filenam
 <li><b>openjscad</b>: command-line nodejs script (renders .jscad to .stl)
 <li><b>openscad.js</b>: openscad wrapper function in javascript (in conjunction with csg.js)
 <li><b>openscad.jscad</b>: same as above with a working example (main() defined)
+<li><b>csg.js</b>: the core of OpenJsCad
 <li><b>examples/</b>:
 <ul>
 <li>example000.jscad: working example (without openscad.js library)
