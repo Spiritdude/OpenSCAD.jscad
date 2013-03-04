@@ -9,7 +9,7 @@ Some wrapper functions to ease the translation from <b><a href="http://openscad.
 
 <h2>History</h2>
 <ul>
-<li> 2013/03/04: 0.005: intersect() -> intersection()
+<li> 2013/03/04: 0.005: intersect() -> intersection(), sin, cos, asin, acos included, more examples 
 <li> 2013/03/02: 0.004: better install, examples/, etc refinements (working on 2d primitives)
 <li> 2013/03/01: 0.003: example.jscad vs example.scad, openscad.js/.jscad split up, and openjscad cli in nodejs implemented
 <li> 2013/02/28: 0.002: center:false default
