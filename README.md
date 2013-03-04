@@ -139,6 +139,9 @@ by default creates filename.('jscad' &rarr; 'stl'), optionally <tt>-o <i>filenam
 <li>example000.scad: original openscad .scad file
 <li>example001.jscad: converted from example001.scad (from OpenSCAD/examples/)
 <li>example001.scad: original openscad .scad file
+<li>example002.jscad: converted from example002.scad (from OpenSCAD/examples/)
+<li>example002.scad: original openscad .scad file
+<li>etc.
 </ul>
 </ul>
 
