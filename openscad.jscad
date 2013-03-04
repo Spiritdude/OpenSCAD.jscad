@@ -50,7 +50,7 @@ function main() {  // -- the same in .jscad :-)
    );
 }
 
-// wrapper functions for OpenJsCAD:
+// wrapper functions for OpenJsCAD: 
 
 function union() { 
    var o,i,a=arguments; 
