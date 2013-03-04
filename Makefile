@@ -1,4 +1,4 @@
-VERSION = 0.004
+VERSION = 0.005
 NAME = openscad.jscad
 LIB = /usr/local/lib/openjscad/  # -- if you change it, change also entry in openjscad:'var lib = '/....';
 

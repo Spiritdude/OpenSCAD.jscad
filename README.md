@@ -1,7 +1,7 @@
 
 <h1>OpenSCAD.js(cad) & openjscad (CLI)</h1>
 
-<b>Version 0.004 (ALPHA)</b>
+<b>Version 0.005 (ALPHA)</b>
 
 Some wrapper functions to ease the translation from <b><a href="http://openscad.org/">OpenSCAD</a> (.scad)</b> to <b><a href="http://joostn.github.com/OpenJsCad/">OpenJsCad</a> (.jscad)</b>: <b>OpenSCAD.js(cad)</b> (<tt>openscad.js / openscad.jscad</tt>).
 
