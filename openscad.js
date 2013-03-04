@@ -9,7 +9,7 @@
 //     http://joostn.github.com/OpenJsCad/processfile.html
 //
 // History:
-// 2013/03/04: 0.005: intersect() -> intersection()
+// 2013/03/04: 0.005: intersect() -> intersection(), sin, cos, asin, acos included, more examples
 // 2013/03/02: 0.004: better install, examples/, etc refinements (working on 2d primitives)
 // 2013/03/01: 0.003: example.jscad vs example.scad, openscad.js/.jscad split up, and openjscad cli in nodejs implemented
 // 2013/02/28: 0.002: center:false default
@@ -193,5 +193,18 @@ function polygon() {
    if(a[0]&&a[0].length) a = a[0];
    var o = CAG.fromPoints(a);
    return o;
+}
+
+function sin(a) {
+   return Math.sin(a/360*Math.PI*2);
+}
+function cos(a) {
+   return Math.cos(a/360*Math.PI*2);
+}
+function asin(a) {
+   return Math.asin(a)/(Math.PI*2)*360;
+}
+function acos(a) {
+   return Math.acos(a)/(Math.PI*2)*360;
 }
 
