@@ -34,10 +34,10 @@ config.js::
 
 install:: config.js
 	chmod a+x openjscad
-	scp openjscad ${BIN}
+	cp openjscad ${BIN}
 	#test -d ${LIB} || mkdir ${LIB}
 	mkdir -p ${LIB}
-	scp *.js ${LIB}
+	cp *.js ${LIB}
 	
 deinstall::
 	rm -f ${LIB}/csg.js ${LIB}/openscad.js
