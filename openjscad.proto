@@ -1,9 +1,11 @@
 #!/usr/bin/nodejs
 
+// The folloing variables will be inserted here by the makefile:
+// prefix, lib, bin, name, version, jsconf
+
 // OpenJsCad CLI interface, written by Rene K. Mueller <spiritdude@gmail.com>
 // License: GPLv2
 //
-var version = '0.002';
 //
 // Description:
 //   openjscad <file> [-o <stl>]
@@ -15,9 +17,6 @@ var version = '0.002';
 // 2013/03/02: 0.002: proper installation of the dependencies (csg.js & openscad.js) so openjscad can be used properly
 // 2013/03/01: 0.001: initial version, with base function from openscad.jscad
 //
-
-var lib = '/usr/local/lib/openjscad/';    // for now hard-coded
-
 var fs = require('fs');
 var vm = require('vm');
 //include('./openscad.js');         // later

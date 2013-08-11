@@ -1,6 +1,13 @@
 VERSION = 0.005
 NAME = openscad.jscad
-LIB = /usr/local/lib/openjscad/  # -- if you change it, change also entry in openjscad:'var lib = '/....';
+
+PREFIX ?= /usr/local/
+LIB    ?= $(PREFIX)/lib/openjscad/
+BIN    ?= $(PREFIX)/bin/
+
+JSCONF   = config.js
+EXEC_PRE = openjscad.proto
+EXEC_FIN = openjscad
 
 all::
 	@echo "make install clean tests" 
@@ -10,9 +17,24 @@ tests::
 
 clean::
 	cd examples; make clean
+	rm openjscad config.js
 
-install::
-	sudo scp openjscad /usr/local/bin/
+config.js::
+		# Gen config | STRIP whitespace > config.js
+		printf "                      \
+			var prefix  = '${PREFIX}';  \n\
+			var lib     = '${LIB}';     \n\
+			var bin     = '${BIN}';     \n\
+			var name    = '${NAME}';    \n\
+			var version = '${VERSION}'; \n\
+			var jsconf  = '${JSCONF}'   \n\
+		" | sed 's/^\s*//; s/\s*$$//' > "${JSCONF}"
+		# Insert into executable
+		sed '2r ${JSCONF}' "${EXEC_PRE}" > "${EXEC_FIN}"
+
+install:: config.js
+	chmod a+x openjscad
+	sudo scp openjscad ${BIN}
 	#sudo test -d ${LIB} || mkdir ${LIB}
 	sudo mkdir -p ${LIB}
 	sudo scp *.js ${LIB}
