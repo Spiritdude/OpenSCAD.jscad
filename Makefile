@@ -34,14 +34,13 @@ config.js::
 
 install:: config.js
 	chmod a+x openjscad
-	sudo scp openjscad ${BIN}
-	#sudo test -d ${LIB} || mkdir ${LIB}
-	sudo mkdir -p ${LIB}
-	sudo scp *.js ${LIB}
+	scp openjscad ${BIN}
+	#test -d ${LIB} || mkdir ${LIB}
+	mkdir -p ${LIB}
+	scp *.js ${LIB}
 	
 deinstall::
-	sudo rm -f ${LIB}/csg.js ${LIB}/openscad.js
-	sudo 
+	rm -f ${LIB}/csg.js ${LIB}/openscad.js
 
 # --- developers only below
 
