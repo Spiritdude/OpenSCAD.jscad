@@ -17,7 +17,7 @@ tests::
 
 clean::
 	cd examples; make clean
-	rm openjscad config.js
+	rm -fv openjscad config.js
 
 config.js::
 		# Gen config | STRIP whitespace > config.js
