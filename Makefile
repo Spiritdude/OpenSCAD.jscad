@@ -9,6 +9,9 @@ JSCONF   = config.js
 EXEC_PRE = openjscad.proto
 EXEC_FIN = openjscad
 
+CENT     = central
+CENT_URL = git@github.com:Spiritdude/OpenSCAD.jscad.git
+
 all::
 	@echo "make install clean tests" 
 
@@ -45,8 +48,10 @@ deinstall::
 # --- developers only below
 
 github::	clean
-	git remote set-url origin git@github.com:Spiritdude/OpenSCAD.jscad.git
-	git push -u origin master
+	git ls-remote ${CENT} >/dev/null            \
+		&& git remote set-url ${CENT} ${CENT_URL} \
+		|| git remote add ${CENT} ${CENT_URL}     
+	git push -u ${CENT} master
 
 dist::	clean
 	cd ..; tar cfz Backup/${NAME}-${VERSION}.tar.gz "--exclude=*.git/*" OpenSCAD.jscad/
