@@ -1,6 +1,16 @@
 VERSION = 0.005
 NAME = openscad.jscad
-LIB = /usr/local/lib/openjscad/  # -- if you change it, change also entry in openjscad:'var lib = '/....';
+
+PREFIX ?= /usr/local/
+LIB    ?= $(PREFIX)/lib/openjscad/
+BIN    ?= $(PREFIX)/bin/
+
+JSCONF   = config.js
+EXEC_PRE = openjscad.proto
+EXEC_FIN = openjscad
+
+CENT     = central
+CENT_URL = git@github.com:Spiritdude/OpenSCAD.jscad.git
 
 all::
 	@echo "make install clean tests" 
@@ -10,22 +20,38 @@ tests::
 
 clean::
 	cd examples; make clean
+	rm -fv openjscad config.js
 
-install::
-	sudo scp openjscad /usr/local/bin/
-	#sudo test -d ${LIB} || mkdir ${LIB}
-	sudo mkdir -p ${LIB}
-	sudo scp *.js ${LIB}
+config.js::
+		# Gen config | STRIP whitespace > config.js
+		printf "                      \
+			var prefix  = '${PREFIX}';  \n\
+			var lib     = '${LIB}';     \n\
+			var bin     = '${BIN}';     \n\
+			var name    = '${NAME}';    \n\
+			var version = '${VERSION}'; \n\
+			var jsconf  = '${JSCONF}'   \n\
+		" | sed 's/^\s*//; s/\s*$$//' > "${JSCONF}"
+		# Insert into executable
+		sed '2r ${JSCONF}' "${EXEC_PRE}" > "${EXEC_FIN}"
+
+install:: config.js
+	chmod a+x openjscad
+	cp openjscad ${BIN}
+	#test -d ${LIB} || mkdir ${LIB}
+	mkdir -p ${LIB}
+	cp *.js ${LIB}
 	
 deinstall::
-	sudo rm -f ${LIB}/csg.js ${LIB}/openscad.js
-	sudo 
+	rm -f ${LIB}/csg.js ${LIB}/openscad.js
 
 # --- developers only below
 
 github::	clean
-	git remote set-url origin git@github.com:Spiritdude/OpenSCAD.jscad.git
-	git push -u origin master
+	git ls-remote ${CENT} >/dev/null            \
+		&& git remote set-url ${CENT} ${CENT_URL} \
+		|| git remote add ${CENT} ${CENT_URL}     
+	git push -u ${CENT} master
 
 dist::	clean
 	cd ..; tar cfz Backup/${NAME}-${VERSION}.tar.gz "--exclude=*.git/*" OpenSCAD.jscad/
